@@ -1,9 +1,10 @@
-```yaml
+
 name: Build Voice APK
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -61,4 +62,3 @@ jobs:
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
           retention-days: 7
-```
